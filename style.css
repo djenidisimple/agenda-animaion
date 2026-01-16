@@ -1,0 +1,144 @@
+:root {
+    --blue: #101527;
+    --red: #E3241B;
+    --gray: #6E6B81;
+    --gray-2: #B1AFB2;
+    --brown: #3A0F0F;
+}
+@font-face {
+    font-family: "CheGuevaraBarry-Brown";
+    src: url(./asseat/CheGuevaraBarry-Brown.ttf);
+}
+* {
+    font-family: "CheGuevaraBarry-Brown";
+}
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 346px;
+    height: 350px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 11px;
+    border-radius: 14px;
+}
+.header {
+    position: relative;
+    height: 84px;
+    background-color: var(--red);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border: 1px solid black;
+}
+.circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background-color: var(--brown);
+}
+.circle::after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 68px;
+    top: -46px;
+    left: 5px;
+    border-radius: 8px;
+    background-color: var(--gray);
+}
+.left {
+    left: 39px;
+}
+.right {
+    right: 39px;
+}
+.paper {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 210px;
+    color: var(--blue);
+    background-color: white;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    transform: rotate(0);
+    top: 100px;
+}
+.z-index-2 {
+    z-index: 2;
+}
+.animate {
+    animation: 1s animation-paper;
+}
+@keyframes animation-paper {
+    from {
+        transform: translateY(0%);
+    }
+
+    to {
+        transform: translateY(120%) rotate(-5deg);
+    }
+}
+.paper-gray {
+    position: absolute;
+    width: 346px;
+    height: 282px;
+    top: 85px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: var(--gray-2);
+    z-index: -1;
+}
+.background {
+    position: relative;
+    width: 374px;
+    height: 372px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: var(--gray);
+}
+@media screen and (max-width: 376px) {
+    .background {
+        width: 340px;
+    }
+    .header {
+        width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .paper-gray, .paper {
+        width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @keyframes animation-paper {
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(100%);
+        }
+    }
+}
