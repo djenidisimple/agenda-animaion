@@ -11,6 +11,6 @@ setInterval(() => {
     paper[i].classList.add("animate");
     paper[i].classList.add("z-index-2");
     j = (i == 1) ? 0 : 1;
-    paper[j].textContent = (parseInt(paper[i].textContent) + 1 == 31) ? formated(1) : formated(parseInt(paper[i].textContent) + 1);
+    paper[j].textContent = (parseInt(paper[i].textContent) + 1 == 32) ? formated(1) : formated(parseInt(paper[i].textContent) + 1);
     i = (i == 1) ? 0 : i + 1;
 }, 1000);
