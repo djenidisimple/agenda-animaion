@@ -26,4 +26,9 @@ Accédez au dossier du projet cloné.
 Ouvrez index.html dans votre navigateur pour commencer à explorer.
 
 ## Resultat
+
+<p align="center">
+
 ![Resultat](./asseat/challenge-1.png)
+
+</p>
